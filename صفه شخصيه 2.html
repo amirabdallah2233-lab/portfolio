@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>أمير — صفحة شخصية احترافية</title>
+  <meta name="description" content="الصفحة الشخصية لأمير — مطور واجهات ومصمم منتجات. سكن: الجيزة، مصر. احترافية، سريعة، ومتجاوبة." />
+  <style>
+    :root{
+      --bg:#0b1220; --card:#071025; --muted:#9fb0c8; --accent:#06b6d4; --glass:rgba(255,255,255,0.03);
+      --radius:12px; --container:1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial; background:linear-gradient(180deg,#07122a 0%, #071827 70%);color:#eaf5fb;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:var(--container);margin:28px auto;padding:20px}
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar{width:86px;height:86px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#7c3aed);flex-shrink:0}
+    .avatar svg{width:56px;height:56px}
+    h1{margin:0;font-size:20px}
+    .sub{color:var(--muted);font-size:13px}
+
+    .main{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:20px}
+    @media (max-width:920px){.main{grid-template-columns:1fr}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,.6);border:1px solid rgba(255,255,255,0.03)}
+
+    .about p{color:var(--muted);line-height:1.6}
+    .contact-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+    .chip{background:var(--glass);padding:8px 10px;border-radius:8px;font-size:14px;color:var(--muted)}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .skill{background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:8px;font-size:13px}
+
+    .timeline{margin-top:14px;border-left:2px solid rgba(255,255,255,0.03);padding-left:14px}
+    .item{margin-bottom:12px}
+    .item h4{margin:0;font-size:15px}
+    .item .meta{font-size:13px;color:var(--muted)}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg,#07111a,#021018)}
+    .project h5{margin:6px 0}
+    .project p{color:var(--muted);font-size:13px;margin:0}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn.primary{background:var(--accent);color:#06282b}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+
+    a:focus,button:focus{outline:2px solid rgba(6,182,212,.14);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="4" fill="white" opacity="0.06"/><path d="M7 17V7h4l4 10h-4l-4-5v5z" fill="white" opacity="0.95"/></svg>
+        </div>
+        <div>
+          <h1>أمير</h1>
+          <div class="sub">مطور واجهات أمامية · مصمم واجهات المستخدم — الجيزة، مصر</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="btn ghost" href="#contact">تواصل</a>
+        <button class="btn primary" onclick="downloadResume()">حمل السيرة الذاتية</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section>
+        <article class="card about">
+          <div class="eyebrow chip">نبذة سريعة</div>
+          <h2 style="margin-top:8px">مرحبًا — أنا أمير</h2>
+          <p>أنا مطور واجهات أمامية ومصمم منتجات أعمل على بناء واجهات سريعة، متجاوبة، وسهلة الاستخدام. خبرتي تشمل HTML، CSS، JavaScript، وتصميم أنظمة واجهة مستخدم مبنية على ممارسات الوصول والأداء. أحب تحويل الأفكار المعقدة إلى تجارب بسيطة وواضحة للمستخدم.</p>
+
+          <div class="contact-list">
+            <div class="chip">📍 الجيزهشارصر</div>
+            <div class="chip">✉️ <a href="mailto:amir@example.com">amir@example.com</a></div>
+            <div class="chip">📞 0151902708</div>
+            <div class="chip">🔗 <a href="#">linkedin.com/in/amir</a> · <a href="#">git@github.com:amirabdallah2233-lab/portfolio.git</a></div>
+          </div>
+
+          <h3 style="margin-top:14px">المهارات الأساسية</h3>
+          <div class="skills">
+            <span class="skill">HTML5</span>
+            <span class="skill">CSS3 / Flexbox / Grid</span>
+            <span class="skill">JavaScript (ES6+)</span>
+            <span class="skill">Responsive Design</span>
+            <span class="skill">Accessibility (a11y)</span>
+            <span class="skill">Performance Optimization</span>
+            <span class="skill">Design Systems</span>
+            <span class="skill">Figma / UI</span>
+          </div>
+
+          <div class="timeline" aria-label="الخبرات">
+            <div class="item">
+              <h4>مشاريع شخصية </h4>
+              <div class="meta"></div>مشاريع شخصية وتطبيقات تدريبية٢٠٢٦</div>
+            </div>
+            <div class="item">
+              <h4>UI Engineer — شركة تِك</h4>
+              <div class="meta">خبرة عملية من خلال مشاريع شخصية ودراسية</div>
+          </div>
+        </article>
+
+        <article class="card" style="margin-top:14px">
+          <h3>مشاريع مختارة</h3>
+          <div class="projects">
+            <div class="project">
+              <h5>  متجر الشنط</h5>
+              <p>متجر منتجات مع عربة تسوق.</p>
+            </div>
+            <div class="project">
+              <h5>Design System</h5>
+              <p> ورتفوليو شخصي يعرض مشاريع حقيقية.</p>
+            </div>
+            <div class="project">
+              <h5>hot burger</h5>
+              <p>صفحة مطعم فيها قائمة طعام وقسم تواصل.</p>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>تواصل سريع</h3>
+          <p class="sub">أرسل رسالة قصيرة أو اطلب عرض أسعار.</p>
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <input type="text" id="name" name="name" placeholder="الاسم الكامل" required style="width:100%;margin-top:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;color:inherit" />
+            <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required style="width:100%;margin-top:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;color:inherit" />
+            <textarea id="message" name="message" placeholder="نبذة عن المشروع" required style="width:100%;margin-top:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;color:inherit"></textarea>
+            <div style="display:flex;gap:8px;margin-top:10px">
+              <button class="btn primary" type="submit">أرسل</button>
+              <button class="btn ghost" type="button" onclick="copyEmail()">نسخ بريدي</button>
+            </div>
+            <div id="status" style="margin-top:8px;color:var(--muted);font-size:13px"></div>
+          </form>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4>الاتصال</h4>
+          <p class="sub">العنوان: الجيزة، مصر</p>
+          <p class="sub">الهاتف: 0151902708</p>
+          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="chip" href="#">GitHub</a>
+            <a class="chip" href="#">LinkedIn</a>
+            <a class="chip" href="#">Behance</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="sub">© <span id="year"></span> أمير — صفحة شخصية احترافية. تصميم وتطوير سريع، متوافق مع الشاشات والقرّاء.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const status = document.getElementById('status');
+      status.textContent = 'جارٍ الإرسال... (محاكاة)';
+      setTimeout(()=>{ status.textContent = 'تم الإرسال — سأرد عليك قريبًا. شكراً!'; e.target.reset(); },800);
+    }
+
+    function copyEmail(){
+      navigator.clipboard && navigator.clipboard.writeText('amir@example.com')
+        .then(()=>{ alert('تم نسخ البريد: amir@example.com'); })
+        .catch(()=>{ prompt('انسخ البريد يدوياً:', 'amir@example.com'); });
+    }
+
+    function downloadResume(){
+      const content = `السيرة الذاتية - أمير\nمطور واجهات أمامية · الجيزة، مصر\nالبريد: amir@example.com\nالهاتف: 0151902708\nالمهارات: HTML, CSS, JS, Accessibility\n`;
+      const blob = new Blob([content], {type: 'text/plain;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'Resume_Amir.txt'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
