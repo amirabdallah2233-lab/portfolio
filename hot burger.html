@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍔 Hot Burger - الذوق الأصيل والجودة العالية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* CSS لإضفاء طابع احترافي ومختلف */
+        :root {
+            --primary-color: #e74c3c; /* الأحمر الناري */
+            --secondary-color: #f1c40f; /* الأصفر الخردلي */
+            --dark-bg: #1e1e1e; /* الخلفية الداكنة */
+            --light-text: #ffffff;
+            --font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            margin: 0;
+            padding: 0;
+            text-align: right; 
+            line-height: 1.6;
+        }
+
+        /* تنسيق الهيدر والبطل (Hero Section) */
+        .hero {
+            background: url('burger-background.jpg') no-repeat center center/cover; /* يمكنك وضع صورة خلفية هنا */
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6); /* طبقة شفافة داكنة */
+        }
+        
+        .hero-content {
+            z-index: 10;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: var(--light-text);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+
+        /* تنسيق التنقل (Navigation) */
+        nav {
+            background-color: #222;
+            padding: 15px 0;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: var(--light-text);
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+            background-color: #333;
+        }
+        
+        /* تنسيق القائمة (Menu Section - استخدام Grid) */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            overflow: hidden;
+            padding: 0 15px;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--secondary-color);
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+            width: fit-content;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* تخطيط شبكي متجاوب */
+            gap: 30px;
+        }
+
+        .menu-item {
+            background-color: #2a2a2a;
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .menu-item h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        
+        .menu-item p {
+            font-size: 0.95em;
+            color: #ccc;
+        }
+
+        .price {
+            font-weight: 900;
+            color: var(--secondary-color);
+            font-size: 1.4em;
+            display: block;
+            margin-top: 15px;
+            text-align: left; /* لإبراز السعر في زاوية */
+        }
+
+        /* تنسيق الفوتر (Footer) */
+        footer {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 50px;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .social-links a {
+            color: var(--secondary-color);
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero" id="home">
+        <div class="hero-content">
+            <h1>🔥 Hot Burger 🔥</h1>
+            <p>أجود أنواع اللحوم وألذ خلطة صوص. تجربة طعام لا تُنسى في قلب القاهرة.</p>
+            <a href="#menu" class="cta-button">تصفح القائمة الآن!</a>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#menu">قائمة الطعام</a></li>
+            <li><a href="#about">قصتنا</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <section id="menu">
+            <h2>قائمة الوجبات الرئيسية 🍔</h2>
+            
+            <div class="menu-grid">
+                
+                <div class="menu-item">
+                    <h3>برجر الفاخر (Signature Burger)</h3>
+                    <p>شريحتان من اللحم البقري الصافي، جبن مونستر، حلقات بصل مقلية، صوص مدخن خاص بنا.</p>
+                    <span class="price">155 ج.م</span>
+                </div>
+
+                <div class="menu-item">
+                    <h3>برجر الدجاج الحار (Fire Chicken)</h3>
+                    <p>صدر دجاج مقرمش بتبهيرة حارة، خس آيسبرغ، مخلل، ومايونيز بالهالبينو.</p>
+                    <span class="price">130 ج.م</span>
+                </div>
+
+                <div class="menu-item">
+                    <h3>برجر المشروم والجبن السويسري</h3>
+                    <p>لحم بقري، طبقة سخية من الفطر الطازج المطبوخ، وجبن سويسري ذائب.</p>
+                    <span class="price">145 ج.م</span>
+                </div>
+
+                <div class="menu-item">
+                    <h3>وجبة الأطفال (Kid's Meal)</h3>
+                    <p>برجر ميني، بطاطس مقلية، وعصير فواكه طبيعي.</p>
+                    <span class="price">85 ج.م</span>
+                </div>
+
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="about">
+            <h2>قصتنا ✨</h2>
+            <p style="text-align: center; max-width: 800px; margin: 20px auto;">
+                بدأ "Hot Burger" بشغف لتقديم برجر حقيقي في مصر. نعتمد فقط على اللحوم الطازجة 100% والمكونات المحلية الفاخرة، ونصنع كل برجر بحب ليكون تجربة لا تُنسى.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <h2>📍 اطلب الآن!</h2>
+            <p style="text-align: center;">
+                للتوصيل، اتصل بنا أو اطلب عبر تطبيقنا.<br>
+                <strong>رقم التوصيل السريع:</strong> 010XXXXXX<br>
+                <strong>العنوان:</strong> شارع 250، المعادي، القاهرة.
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 هوت برجر (Hot Burger). جميع الحقوق محفوظة.</p>
+        <div class="social-links">
+            <a href="#">فيسبوك</a> |
+            <a href="#">انستجرام</a> |
+            <a href="#">تويتر</a>
+        </div>
+    </footer>
+
+</body>
+</html>
